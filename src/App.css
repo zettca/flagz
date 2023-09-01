@@ -1,0 +1,29 @@
+main {
+  display: flex;
+  height: 100%;
+  gap: 2rem;
+  padding: 0 2rem;
+  flex-flow: column;
+  place-items: center;
+  place-content: center;
+}
+
+main {
+  & img {
+    height: 70vh;
+    max-width: 100%;
+  }
+}
+
+form {
+  & fieldset {
+    display: flex;
+    gap: 1rem;
+  }
+
+  & button {
+    padding: 1rem 2rem;
+    border-style: none;
+    border-radius: 2px;
+  }
+}
