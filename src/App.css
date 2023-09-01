@@ -2,15 +2,15 @@ main {
   display: flex;
   height: 100%;
   gap: 2rem;
-  padding: 0 2rem;
+  padding: 0 1rem;
   flex-flow: column;
-  place-items: center;
   place-content: center;
 }
 
 main {
   & img {
     max-width: 100%;
+    object-fit: scale-down;
   }
 }
 
@@ -18,12 +18,15 @@ form {
   & fieldset {
     display: flex;
     gap: 1rem;
-  }
+    flex-flow: row wrap;
+    place-content: stretch;
 
-  & button {
-    padding: 1rem 2rem;
-    cursor: pointer;
-    border-style: none;
-    border-radius: 2px;
+    & button {
+      flex: 1;
+      padding: 1rem 2rem;
+      cursor: pointer;
+      border-style: none;
+      border-radius: 2px;
+    }
   }
 }

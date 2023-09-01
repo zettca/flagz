@@ -24,7 +24,7 @@ function App() {
 
   return (
     <main>
-      <img src={cc().flagUrl} alt={alt()} height="70%" width="auto" />
+      <img src={cc().flagUrl} alt={alt()} height="60%" width="auto" />
       <form
         onSubmit={async (event) => {
           event.preventDefault();
