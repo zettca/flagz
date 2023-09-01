@@ -20,10 +20,11 @@ function App() {
 
   /** Correct country */
   const cc = () => countries()[answerIndex()];
+  const alt = () => cc().alt.replace(cc().name, "***");
 
   return (
     <main>
-      <img src={cc().flagUrl} alt={cc().alt.replace(cc().name, "***")} />
+      <img src={cc().flagUrl} alt={alt()} height="70%" width="auto" />
       <form
         onSubmit={async (event) => {
           event.preventDefault();
