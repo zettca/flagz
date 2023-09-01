@@ -10,7 +10,7 @@ main {
 
 main {
   & img {
-    height: 70vh;
+    max-height: 70vh;
     max-width: 100%;
   }
 }
@@ -23,6 +23,7 @@ form {
 
   & button {
     padding: 1rem 2rem;
+    cursor: pointer;
     border-style: none;
     border-radius: 2px;
   }
