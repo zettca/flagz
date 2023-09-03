@@ -1,30 +1,45 @@
 import { Index, createSignal } from "solid-js";
 
-import { delay, rand } from "./utils";
+import { delay, playSound, rand } from "./utils";
 import { getCountries } from "./data/countries";
 
 import "./App.css";
 
 const numCountries = 4;
 
-function App() {
+export default function App() {
   const [colors, setColors] = createSignal<Record<number, string>>({});
   const [countries, setCountries] = createSignal(getCountries(numCountries));
   const [answerIndex, setAnswerIndex] = createSignal(rand(numCountries - 1));
+  const [loading, setLoading] = createSignal(false);
 
-  const nextGame = () => {
+  const nextGame = async ({ delayStart = 200 }) => {
     const newCountries = getCountries(numCountries);
-    setAnswerIndex(rand(numCountries - 1));
+    const newAnswerIdx = rand(numCountries - 1);
+
+    // preload image before waiting for new game
+    setLoading(true);
+    new Image().src = newCountries[newAnswerIdx].flagUrl;
+    await delay(delayStart);
+
+    setAnswerIndex(newAnswerIdx);
     setCountries(newCountries);
+    setLoading(false);
   };
 
   /** Correct country */
   const cc = () => countries()[answerIndex()];
-  const alt = () => cc().alt.replace(cc().name, "***");
+  const alt = () => cc().alt.replace(cc().name, "COUNTRY");
 
   return (
     <main>
-      <img src={cc().flagUrl} alt={alt()} height="60%" width="auto" />
+      <img
+        src={cc().flagUrl}
+        alt={alt()}
+        height="60%"
+        width="auto"
+        aria-live="polite"
+      />
       <form
         onSubmit={async (event) => {
           event.preventDefault();
@@ -36,12 +51,12 @@ function App() {
             [answerIndex()]: "green",
             [pickedIndex]: isCorrect ? "green" : "red",
           });
-          await delay(1000);
-          nextGame();
+          playSound(isCorrect ? 720 : 360);
+          await nextGame({ delayStart: isCorrect ? 1000 : 2000 });
           setColors([]);
         }}
       >
-        <fieldset>
+        <fieldset disabled={loading()}>
           <legend>Guess the country</legend>
           <Index each={countries()}>
             {(c, i) => (
@@ -58,5 +73,3 @@ function App() {
     </main>
   );
 }
-
-export default App;

@@ -17,3 +17,13 @@ export function shuffleArray<T>(array: T[]): T[] {
     [...array]
   );
 }
+
+export function playSound(frequency: number, duration = 0.2) {
+  const audioContext = new AudioContext();
+  const oscillator = audioContext.createOscillator();
+  oscillator.type = "sine";
+  oscillator.frequency.setValueAtTime(frequency, audioContext.currentTime);
+  oscillator.connect(audioContext.destination);
+  oscillator.start();
+  oscillator.stop(audioContext.currentTime + duration);
+}
