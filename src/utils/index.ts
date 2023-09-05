@@ -48,8 +48,8 @@ export function playSeqSound(
 }
 
 const sounds = {
-  success: "/sounds/correct.mp3",
-  error: "/sounds/wrong.mp3",
+  success: "./sounds/correct.mp3",
+  error: "./sounds/wrong.mp3",
 };
 
 export async function playAudio(type: keyof typeof sounds) {
