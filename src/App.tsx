@@ -1,6 +1,6 @@
 import { Index, createSignal } from "solid-js";
 
-import { delay, playSound, rand } from "./utils";
+import { delay, playAudio, rand } from "./utils";
 import { getCountries } from "./data/countries";
 
 import "./App.css";
@@ -51,7 +51,8 @@ export default function App() {
             [answerIndex()]: "green",
             [pickedIndex]: isCorrect ? "green" : "red",
           });
-          playSound(isCorrect ? 720 : 360);
+          // playSeqSound(isCorrect ? 700 : 400, { inc: isCorrect ? 80 : -80 });
+          playAudio(isCorrect ? "success" : "error");
           await nextGame({ delayStart: isCorrect ? 1000 : 2000 });
           setColors([]);
         }}
