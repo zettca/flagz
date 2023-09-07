@@ -3,8 +3,6 @@ import { Index, createSignal } from "solid-js";
 import { delay, playAudio, rand } from "./utils";
 import { getCountries } from "./data/countries";
 
-import "./App.css";
-
 const numCountries = 4;
 
 export default function App() {
@@ -32,15 +30,17 @@ export default function App() {
   const alt = () => cc().alt.replace(cc().name, "COUNTRY");
 
   return (
-    <main>
+    <main class="flex gap-8 h-full px-8 flex-col flex-justify-end">
       <img
         src={cc().flagUrl}
         alt={alt()}
         height="60%"
         width="auto"
         aria-live="polite"
+        class="m-auto max-w-full object-contain"
       />
       <form
+        class="text-xl mb-8"
         onSubmit={async (event) => {
           event.preventDefault();
           const clickedButton = event.submitter as HTMLButtonElement;
@@ -57,11 +57,15 @@ export default function App() {
           setColors([]);
         }}
       >
-        <fieldset disabled={loading()}>
+        <fieldset
+          disabled={loading()}
+          class="flex gap-4 flex-row flex-wrap rounded"
+        >
           <legend>Guess the country</legend>
           <Index each={countries()}>
             {(c, i) => (
               <button
+                class="text-lg flex-half px-8 py-4 cursor-pointer rounded"
                 value={String(i)}
                 style={{ "background-color": colors()[i] }}
               >
