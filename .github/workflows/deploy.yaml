@@ -39,7 +39,7 @@ jobs:
 
       - uses: actions/upload-pages-artifact@v1.0.5
         with:
-          path: dist/public
+          path: dist/
           retention-days: 1
 
   Publish:
