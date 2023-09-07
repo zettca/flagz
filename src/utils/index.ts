@@ -22,9 +22,9 @@ export function shuffleArray<T>(array: T[]): T[] {
   );
 }
 
-const audioContext = new AudioContext();
-
 export function playSound(frequencies: number[], duration = 0.2) {
+  const audioContext = new AudioContext();
+
   function playFrequency(frequency: number, startTime: number) {
     const oscillator = audioContext.createOscillator();
     oscillator.type = "triangle";
