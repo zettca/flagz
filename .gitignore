@@ -11,6 +11,11 @@ node_modules
 dist
 dist-ssr
 *.local
+.solid
+.output
+.vercel
+.netlify
+netlify
 
 # Editor directories and files
 .vscode/*
