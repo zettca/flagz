@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@unocss/reset": "^0.55.7",
     "solid-js": "^1.7.11"
   },
   "devDependencies": {

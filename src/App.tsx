@@ -40,7 +40,7 @@ export default function App() {
         class="m-auto max-w-full object-contain"
       />
       <form
-        class="text-xl mb-8"
+        class="text-xl"
         onSubmit={async (event) => {
           event.preventDefault();
           const clickedButton = event.submitter as HTMLButtonElement;
@@ -59,13 +59,13 @@ export default function App() {
       >
         <fieldset
           disabled={loading()}
-          class="flex gap-4 flex-row flex-wrap rounded"
+          class="flex flex-wrap rounded gap-4 mb-8 mx-16"
         >
           <legend>Guess the country</legend>
           <Index each={countries()}>
             {(c, i) => (
               <button
-                class="text-lg flex-half px-8 py-4 cursor-pointer rounded"
+                class="text-lg flex-half px-8 py-4 button"
                 value={String(i)}
                 style={{ "background-color": colors()[i] }}
               >
