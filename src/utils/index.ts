@@ -10,7 +10,7 @@ export function delay(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-/** Shuffles array using Fisher-Yates shuffle algoritm */
+/** Shuffles array using Fisher-Yates shuffle algorithm */
 export function shuffleArray<T>(array: T[]): T[] {
   return array.reduceRight(
     (acc, _, i) => {
