@@ -18,7 +18,7 @@ export function shuffleArray<T>(array: T[]): T[] {
       [acc[i], acc[j]] = [acc[j], acc[i]];
       return acc;
     },
-    [...array]
+    [...array],
   );
 }
 
@@ -41,7 +41,7 @@ export function playSound(frequencies: number[], duration = 0.2) {
 
 export function playSeqSound(
   frequency: number,
-  { inc = 100, times = 3, duration = 0.1 } = {}
+  { inc = 100, times = 3, duration = 0.1 } = {},
 ) {
   const frequencies = range(times).map((i) => frequency + inc * i);
   playSound(frequencies, duration);

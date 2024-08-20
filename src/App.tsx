@@ -1,7 +1,6 @@
-import { Index, createSignal } from "solid-js";
-
-import { delay, rand } from "./utils";
+import { createSignal, Index } from "solid-js";
 import { getCountries } from "./data/countries";
+import { delay, rand } from "./utils";
 
 const numCountries = 4;
 

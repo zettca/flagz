@@ -6,17 +6,21 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "fmt": "prettier --check ."
   },
-  "packageManager": "pnpm@8.15.8+sha512.d1a029e1a447ad90bc96cd58b0fad486d2993d531856396f7babf2d83eb1823bb83c5a3d0fc18f675b2d10321d49eb161fece36fe8134aa5823ecd215feed392",
+  "prettier": "@zettca/prettier-config",
+  "packageManager": "pnpm@9.7.1+sha512.faf344af2d6ca65c4c5c8c2224ea77a81a5e8859cbc4e06b1511ddce2f0151512431dd19e6aff31f2c6a8f5f2aced9bd2273e1fed7dd4de1868984059d2c4247",
   "dependencies": {
-    "@unocss/reset": "^0.60.3",
-    "solid-js": "^1.7.11"
+    "@unocss/reset": "^0.62.2",
+    "solid-js": "^1.8.21"
   },
   "devDependencies": {
-    "typescript": "^5.2.2",
-    "unocss": "^0.60.3",
-    "vite": "^5.2.12",
-    "vite-plugin-solid": "^2.7.0"
+    "@zettca/prettier-config": "^0.2.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4",
+    "unocss": "^0.62.2",
+    "vite": "^5.4.2",
+    "vite-plugin-solid": "^2.10.2"
   }
 }
