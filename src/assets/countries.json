@@ -243,7 +243,7 @@
     "code": "CR",
     "flagUrl": "https://flagcdn.com/cr.svg",
     "name": "Costa Rica",
-    "alt": "The flag of Costa Rica is composed of five horizontal bands of blue, white, red, white and blue. The central red band is twice the height of the other four bands."
+    "alt": "The flag of Costa Rica is composed of five horizontal bands of blue, white, red, white and blue. The central red band is twice the height of the other four bands. The national coat of arms is placed in a white elliptical disk toward the hoist side of the red band."
   },
   {
     "code": "CU",
@@ -441,7 +441,7 @@
     "code": "HR",
     "flagUrl": "https://flagcdn.com/hr.svg",
     "name": "Croatia",
-    "alt": "The flag of Croatia is composed of three equal horizontal bands of red, white and blue, with coat of arms of Croatia superimposed in the center."
+    "alt": "The flag of Croatia is composed of three equal horizontal bands of red, white and blue, with the coat of arms of Croatia superimposed in the center."
   },
   {
     "code": "HT",
@@ -507,7 +507,7 @@
     "code": "JM",
     "flagUrl": "https://flagcdn.com/jm.svg",
     "name": "Jamaica",
-    "alt": "The flag of Jamaica is divided by a gold diagonal cross into four alternating triangular areas of green at the top and bottom, and black on the hoist and fly sides"
+    "alt": "The flag of Jamaica is divided by a gold diagonal cross into four alternating triangular areas of green at the top and bottom, and black on the hoist and fly sides."
   },
   {
     "code": "JO",
@@ -562,6 +562,12 @@
     "flagUrl": "https://flagcdn.com/kr.svg",
     "name": "South Korea",
     "alt": "The flag of South Korea has a white field, at the center of which is a red and blue Taegeuk circle surrounded by four black trigrams, one in each corner."
+  },
+  {
+    "code": "XK",
+    "flagUrl": "https://flagcdn.com/xk.svg",
+    "name": "Kosovo",
+    "alt": "The flag of Kosovo has a dark blue field with a gold-colored silhouette of the country in the center, with six five-pointed white stars in a slight arc over it."
   },
   {
     "code": "KW",
@@ -957,7 +963,7 @@
     "code": "ST",
     "flagUrl": "https://flagcdn.com/st.svg",
     "name": "São Tomé and Príncipe",
-    "alt": "The flag of South Sudan is composed of three equal horizontal bands of black, red with white top and bottom edges, and green. A blue equilateral triangle which spans about two-fifth the width of the field is superimposed on the hoist side with its base on the hoist end of the field. At the center of this triangle is a five-pointed yellow star."
+    "alt": "The flag of São Tomé and Príncipe has three horizontal bands of green, yellow (double-width), and green, with two black five-pointed stars in the center of the yellow band and a red isosceles triangle based on the hoist side."
   },
   {
     "code": "SR",
@@ -1161,6 +1167,6 @@
     "code": "ZW",
     "flagUrl": "https://flagcdn.com/zw.svg",
     "name": "Zimbabwe",
-    "alt": "The flag of Zimbabwe is composed of seven equal horizontal bands of green, yellow, red, black, red, yellow and green, with a white isosceles triangle superimposed on the hoist side of the field. This triangle is edged in black, spans about one-fourth the width of the field and has its base on the hoist end. A yellow Zimbabwe bird superimposed on a five-pointed red star is centered in the triangle."
+    "alt": "The flag of Zimbabwe is composed of seven equal horizontal bands of green, yellow, red, black, red, yellow and green, with a white isosceles triangle superimposed on the hoist side of the field. This triangle is edged in black, spans about one-fourth the width of the field and has its base on the hoist end. A yellow Zimbabwe Bird superimposed on a five-pointed red star is centered in the triangle."
   }
 ]
