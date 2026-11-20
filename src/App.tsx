@@ -1,4 +1,4 @@
-import { createSignal, Index } from "solid-js";
+import { createSignal, For } from "solid-js";
 import { getCountries } from "./data/countries";
 import { delay, rand } from "./utils";
 
@@ -10,8 +10,8 @@ export default function App() {
   const [answerIndex, setAnswerIndex] = createSignal(rand(numCountries - 1));
   const [loading, setLoading] = createSignal(false);
 
-  let audioCorrectRef: HTMLAudioElement;
-  let audioWrongRef: HTMLAudioElement;
+  let audioCorrectRef!: HTMLAudioElement;
+  let audioWrongRef!: HTMLAudioElement;
 
   const nextGame = async ({ delayStart = 200 }) => {
     const newCountries = getCountries(numCountries);
@@ -33,8 +33,8 @@ export default function App() {
 
   return (
     <main class="flex gap-8 h-full px-8 flex-col flex-justify-end">
-      <audio ref={audioCorrectRef!} src="./sounds/correct.mp3" preload="auto" />
-      <audio ref={audioWrongRef!} src="./sounds/wrong.mp3" preload="auto" />
+      <audio ref={audioCorrectRef} src="./sounds/correct.mp3" preload="auto" />
+      <audio ref={audioWrongRef} src="./sounds/wrong.mp3" preload="auto" />
       <img
         src={cc().flagUrl}
         alt={alt()}
@@ -66,7 +66,7 @@ export default function App() {
           class="flex flex-wrap rounded gap-4 mb-8 mx-16"
         >
           <legend>Guess the country</legend>
-          <Index each={countries()}>
+          <For each={countries()} keyed={false}>
             {(c, i) => (
               <button
                 class="text-lg flex-half px-8 py-4 button"
@@ -76,7 +76,7 @@ export default function App() {
                 {c().name}
               </button>
             )}
-          </Index>
+          </For>
         </fieldset>
       </form>
     </main>
