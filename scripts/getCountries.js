@@ -14,6 +14,9 @@ async function main() {
       flagUrl: c.flag.svg,
       name: c.name.common,
       alt: c.flag.alt,
+      continents: c.continents,
+      population: c.population,
+      area: c.area,
     }));
 
   console.log(JSON.stringify(filteredData, null, 2));

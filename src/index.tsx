@@ -3,7 +3,6 @@ import { render } from "@solidjs/web";
 import App from "./App";
 import "./index.css";
 import "virtual:uno.css";
-import "@unocss/reset/normalize.css";
 
 const root = document.getElementById("root");
 

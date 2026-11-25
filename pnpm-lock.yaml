@@ -11,13 +11,13 @@ importers:
       '@solidjs/web':
         specifier: ^2.0.3
         version: 2.0.3(solid-js@2.0.3)
-      '@unocss/reset':
-        specifier: ^66.13.0
-        version: 66.13.0
       solid-js:
         specifier: ^2.0.3
         version: 2.0.3
     devDependencies:
+      '@ianvs/prettier-plugin-sort-imports':
+        specifier: ^4.7.1
+        version: 4.7.1(prettier@3.10.1)
       '@solidjs/vite-plugin':
         specifier: ^3.0.1
         version: 3.0.1(@solidjs/web@2.0.3(solid-js@2.0.3))(solid-js@2.0.3)(vite@8.3.8(jiti@2.7.0))
@@ -631,9 +631,6 @@ packages:
 
   '@unocss/preset-wind@66.13.0':
     resolution: {integrity: sha512-3hqbOf1uzlpbod95oa6hMioAkd6NKxAm0U9EllefuzuEaXfKrMCbRBsIHUdmGghhz79QsQfLeBUT1HcR2gyX7A==}
-
-  '@unocss/reset@66.13.0':
-    resolution: {integrity: sha512-pLO7YxYPoKNRAyfeWK0szaow/8V7uCoKjARiUZ6vKKPdTFYXAI182PD6rarLozS13KQjjtjYfBmKNkbs843GHg==}
 
   '@unocss/rollup@66.13.0':
     resolution: {integrity: sha512-aBWYlNNkoFxwVgnOYgMaISF7QUIJjCIFqvoYsZZEoJn9f5z6JVwYVmmpZoq/AJu5jXPY5jz0ei2E4GNauT70Wg==}
@@ -1555,8 +1552,6 @@ snapshots:
     dependencies:
       '@unocss/core': 66.13.0
       '@unocss/preset-wind3': 66.13.0
-
-  '@unocss/reset@66.13.0': {}
 
   '@unocss/rollup@66.13.0(rolldown@1.2.19)':
     dependencies:
